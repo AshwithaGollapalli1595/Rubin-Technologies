@@ -1,30 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<img src=" ">
-<title>Rubin.— AI-Native Platforms for Climate, Compliance & Growth</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+
+<title>Rubin — AI-Native Platforms for Climate, Compliance & Growth</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans&display=swap" rel="stylesheet">
+
 <style>
-  :root {
+/* LOGO */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    margin-right: 10px;
+}
+
+/* YOUR ORIGINAL CSS */
+:root {
     --black: #0a0a0a; --off-white: #f2f0eb; --cream: #e8e4dc;
     --green: #1a7a4a; --green-mid: #2ea860; --green-bright: #4cd980;
     --green-dim: #0d3d24; --amber: #c9a227;
     --text-main: #0a0a0a; --text-muted: #5a5a52;
     --border: rgba(0,0,0,0.1); --nav-h: 72px;
-  }
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body { font-family: 'DM Sans', sans-serif; background: var(--off-white); color: var(--text-main); overflow-x: hidden; }
+}
 
-  /* NAV */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    height: var(--nav-h); display: flex; align-items: center; justify-content: space-between;
-    padding: 0 48px; background: rgba(242,240,235,0.92);
-    backdrop-filter: blur(16px); border-bottom: 1px solid var(--border);
-  }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--off-white);
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+/* NAV */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    height: var(--nav-h);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 48px;
+    background: rgba(242,240,235,0.92);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="Rubin tech logo.jpeg" class="logo">
+        <h2>Rubin Technologies</h2>
+    </div>
+</header>
   .nav-logo {
     font-family: 'Syne', sans-serif; font-size: 1.25rem; font-weight: 800;
     letter-spacing: -0.02em; color: var(--black); text-decoration: none;
