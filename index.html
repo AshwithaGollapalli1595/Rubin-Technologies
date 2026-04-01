@@ -11,10 +11,11 @@
 
 <style>
 /* LOGO */
+/* LOGO */
 .nav-logo img {
-    height: 44px;
+    height: 60px;
     width: auto;
-    max-width: 160px;
+    max-width: 200px;
     object-fit: contain;
     display: block;
 }
@@ -438,8 +439,30 @@ nav {
           <div class="ev-grid"></div>
           <div class="ev-content">
             <div class="scope-rings"><div class="ring-wrap"><div class="ring ring-1"></div><div class="ring ring-2"></div><div class="ring ring-3"><div class="ring-core"></div></div></div></div>
-            <div class="scope-labels"><div class="scope-label"><strong>Scope 1</strong>Direct</div><div class="scope-label"><strong>Scope 2</strong>Energy</div><div class="scope-label"><strong>Scope 3</strong>Value chain</div></div>
-          </div>
+           <div class="scope-labels">
+  <div class="scope-label">
+    <strong>Scope 1</strong>
+    Direct Emissions
+    <span>Fuel, machinery,<br>owned vehicles</span>
+  </div>
+  <div class="scope-label">
+    <strong>Scope 2</strong>
+    Purchased Energy
+    <span>Electricity, steam,<br>heating & cooling</span>
+  </div>
+  <div class="scope-label">
+    <strong>Scope 3</strong>
+    Value Chain
+    <span>Suppliers, logistics,<br>product end-of-life</span>
+  </div>
+</div>
+ .scope-label span {
+  display: block;
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.35);
+  margin-top: 4px;
+  line-height: 1.5;
+}
         </div>
       </div>
       <div class="engine-block reverse">
