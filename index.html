@@ -169,10 +169,10 @@ nav {
   .engines-section { background: var(--cream); }
   .engines-inner { max-width: 1280px; margin: 0 auto; }
   .engine-block { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; padding: 80px 0; border-bottom: 1px solid var(--border); }
+.engine-block.reverse { display: flex; flex-direction: row-reverse; }
   .engine-block:first-of-type { padding-top: 0; }
   .engine-block:last-of-type { border-bottom: none; }
-  .engine-block.reverse { direction: rtl; }
-  .engine-block.reverse > * { direction: ltr; }
+  .engine-block.reverse { flex-direction: row-reverse; }
   .engine-tag { display: inline-block; background: var(--green); color: white; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 20px; }
   .engine-block h2 { margin-bottom: 12px; }
   .engine-sub { font-size: 1rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 32px; font-weight: 300; }
@@ -294,6 +294,7 @@ nav {
   .reveal.visible { opacity: 1; transform: translateY(0); }
 
   /* RESPONSIVE */
+.hamburger { display: none; }
   @media (max-width: 1024px) {
     nav { padding: 0 28px; }
     section { padding: 80px 28px; }
@@ -309,9 +310,37 @@ nav {
     .engine-two-col { grid-template-columns: 1fr; }
     .service-detail { grid-template-columns: 1fr; gap: 24px; }
   }
-  @media (max-width: 640px) {
+ @media (max-width: 640px) {
     nav { padding: 0 20px; }
-    .nav-links { display: none; }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: var(--nav-h);
+        left: 0;
+        right: 0;
+        background: rgba(242,240,235,0.98);
+        backdrop-filter: blur(16px);
+        padding: 20px;
+        border-bottom: 1px solid var(--border);
+        gap: 8px;
+        z-index: 99;
+    }
+    .nav-links.open { display: flex; }
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        padding: 4px;
+    }
+    .hamburger span {
+        width: 24px;
+        height: 2px;
+        background: var(--black);
+        border-radius: 2px;
+        transition: all 0.3s;
+    }
     section { padding: 64px 20px; }
     .hero-left { padding: 64px 20px; }
     .services-grid { grid-template-columns: 1fr; }
@@ -331,9 +360,17 @@ nav {
 
 <nav>
  <div class="nav-logo" onclick="navigate('home')">
+     function toggleMenu() {
+    const nav = document.getElementById('nav-links');
+    nav.classList.toggle('open');
+}
   <img src="logo.png" alt="Rubin tech Logo">
 </div>
-  <ul class="nav-links">
+<div class="hamburger" onclick="toggleMenu()" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+  <ul class="nav-links" id="nav-links">
+      
     <li><a data-page="about" onclick="navigate('about')">About</a></li>
     <li><a data-page="services" onclick="navigate('services')">Services</a></li>
     <li><a data-page="engines" onclick="navigate('engines')">Engines</a></li>
